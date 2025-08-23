@@ -11,7 +11,7 @@ console.log(multiplyThree);
 
 // Question 2 : Array.filter()
 
-const nums = [1, 2, 3, 4];
+// const nums = [1, 2, 3, 4];
 
 const moreThanTwo = nums.filter((num, i, arr) => num > 2 === 0);
 console.log(moreThanTwo);
@@ -20,7 +20,7 @@ console.log(moreThanTwo);
 
 // Question 3 : Array.reduce()
 
-const nums = [1, 2, 3, 4];
+// const nums = [1, 2, 3, 4];
 
 const sum = nums.reduce((acc, curr, i, arr) => {
   return acc + curr;
@@ -83,14 +83,14 @@ let students = [
 
 // Solution 1 : Traditional for() loop
 let names = [];
-for (let index = 0; index < studentRecords.length; index++){
+for (let index = 0; index < students.length; index++){
      names.push(students[index].name.toUpperCase());
 }
 
 console.log(names);
 
 // Solution 2 : forEach()
-let names = []
+// let names = []
 students.forEach( student => {
      names.push(student.name.toUpperCase());
 })
@@ -98,20 +98,20 @@ students.forEach( student => {
 console.log(names);
 
 // Solution 3 : map() 
-let names = students.map( stu => stu.name.toUpperCase());
-console.log(names);
+let names_map = students.map( stu => stu.name.toUpperCase());
+console.log(names_map);
 
 
 // Q2 - we want to get the details of students who scored more than 60 marks.
 
-let names = students.filter(stu => stu.marks > 60);
-console.log(names);
+let names_filter = students.filter(stu => stu.marks > 60);
+console.log(names_filter);
 
 
 // Q3 - Get the details of students who scored more than 60 marks and have rollNumber greater than 15.
 
-let names = students.filter(stu => stu.marks > 60 && stu.rollNumber > 20)
-console.log(names);
+let names1 = students.filter(stu => stu.marks > 60 && stu.rollNumber > 20)
+console.log(names1);
 
 
 // Q4 - Sum total of the marks of the students
@@ -122,16 +122,16 @@ console.log(totalMarks);
 
 // Q5 - Get only the names of the students who scored more than 60 marks
 
-let names = students.filter(stu => stu.marks > 50).map(stu => stu.name)
-console.log(names);
+let names2 = students.filter(stu => stu.marks > 50).map(stu => stu.name)
+console.log(names2);
 
 
 // Q6 - print the total marks of the students with marks greater than 60 after 20 marks has been added to those students who scored less than 60.
 
-let totalMarks = studentRecords.map(function(stu){ 
+let totalMarks1 = students.map(function(stu){ 
     if(stu.marks < 60){
         stu.marks += 20;}
     return stu;
 }).filter(stu => stu.marks > 60).reduce((acc,curr) => acc+curr.marks, 0);
 
-console.log(totalMarks);
+console.log(totalMarks1);

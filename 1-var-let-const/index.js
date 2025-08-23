@@ -24,11 +24,11 @@ function func() {
   if (true) {
     let a = "Hi"; // Legal Shadowing
     var b = "Bye"; // Illegal Shadowing
-    console.log(a); // It will print 'GeeksforGeeks'
+    console.log(a); // It will print 'Hi'
     console.log(b); // It will print error
   }
 }
-test();
+func();
 
 // Question 3 : Hoisting
 
